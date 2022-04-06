@@ -53,3 +53,9 @@
         height: 280px;
     }
 }
+@media (max-width:320px) {
+
+    fieldset{
+        width: 300px;
+    }
+}

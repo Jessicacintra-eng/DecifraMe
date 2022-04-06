@@ -94,7 +94,7 @@ function desconverteDeCripto() {
             passo = passo + 26
         }
         var extra = arrayTexto[j] + passo
-        if (arrayTexto[j] == 32) {
+        if (arrayTexto[j]<65||(arrayTexto[j]>90&&arrayTexto[j]<97)||arrayTexto[j]>122) {
             arrayCrypto.push(String.fromCharCode(arrayTexto[j]))
         } else if (arrayTexto[j] <= 90) {
             if (extra > 90) {
