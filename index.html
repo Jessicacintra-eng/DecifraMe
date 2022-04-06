@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jessica Cintra">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">    
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <link rel="stylesheet" type="text/css" href="./css/mediaquery.css">
+
+    <link rel="icon" href="./image/programmer.png">
+    
+
+    <title>Decifra-me</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="left">
+            <h2 id="circle">ABCDEFGHIJKLMNOPQRSTUWXYZ</h2>
+            <h2 id="circle-inner">ZXYWUTSRQPONMLKJIHGFEDCBA</h2>
+            <div class="" id="deciframe">
+
+                <article class="container">
+                    <h3>DECIFRA-ME</h3>
+                    Codificador/decodificador de mensagens com a técnica de criptografia 'Cifra de Cézar' ou 'Base 64',
+                    selecione o método e veja como ele funciona!
+
+                    <h4>Saiba mais sobre criptografia <br>
+                        <a href="https://pt.wikipedia.org/wiki/Criptografia" target="_blank">AQUI</a>!!</h4>
+                </article>
+            </div>
+            <div class="hidden" id="cifratext">
+
+                <article class="container">
+                    <!-- <h3>DECIFRA-ME</h3> -->
+                    <h3>Cifra de Cézar</h3>
+                    Método no qual cada letra no texto simples é substituída por uma letra em um número fixo de posições
+                    abaixo do alfabeto. O método tem o nome de Júlio César, que o usou em sua correspondência privada.
+
+                    <h4>Saiba mais <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar"
+                            target="_blank">AQUI</a>!!</h4>
+                </article>
+            </div>
+            <div class="hidden" id="b64text">
+                <article class="container">
+                    <!-- <h3>DECIFRA-ME</h3> -->
+                    <h3>Base 64</h3>
+                    Base64 é usado para codificar dados binários em mensagens de e-mail e páginas da web, por exemplo.
+                    Ele também é usado para transmitir arquivos binários através de canais que não são 8 bits limpos ou
+                    sem a necessidade de se preocupar com problemas de ordem de bytes.
+
+                    <h4>Saiba mais <a href="https://pt.wikipedia.org/wiki/Base64" target="_blank">AQUI</a>!!</h4>
+                </article>
+            </div>
+        </div>
+        <div class="right">
+
+            <fieldset>
+
+                <legend id="legend"><h1>DECIFRA-ME</h1></legend>
+                <form>
+                    <div class="btnradio">
+                        <input type="radio" id="btnCifrar" name="btn" value="on" checked>
+                        <label for="Codificar">Codificar</label>
+                        <input type="radio" id="btnDecifrar" name="btn" value="off">
+                        <label for="Decodificar">Decodificar</label>
+                    </div>
+                    <div>
+                        <label for="select">Selecione o método de <span class="nome">criptografar</span></label><br>
+                        <select name="select" id="caixaDeSelecao">
+                            <option value="valor1" selected>Selecione</option>
+                            <option value="valor1" id="CC">Cifra de César</option>
+                            <option value="valor2" id="base64">Base 64</option>
+                        </select><br>
+                        <br>
+                        <label for="passo" id="passoLabel" class="hidden">Passo</label>
+                        <input type="number" id="passo" size="4" class="hidden"><br>
+                    </div>
+                    <div>
+                        <label for="textoentrada">Digite o que deseja <span class="nome">criptografar</span></label><br>
+                        <textarea type="text" id="textoEntrada"  cols="33"
+                            style="resize: none" placeholder="Insira seu texto aqui."></textarea>
+                        <br>
+
+                        <label for="textoSaida">Seu texto após <span class="nome">criptografar</span> ficou:</label><br>
+                        <textarea type="text" name="textoSaida" id="textoSaida" disabled=""  cols="33"
+                            style="resize: none"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" id="btnCodificar" class=""> Codificar mensagem </button>
+                        <button type="submit" id="btnDecodificar" class="hidden"> Decodificar mensagem </button>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </main>
+
+    <script src="./js/codificadorCC.js"></script>
+    <script src="./js/codificadorB64.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
